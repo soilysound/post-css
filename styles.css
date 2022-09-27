@@ -1,0 +1,17 @@
+@custom-media --narrow-window all and (max-width: 30em);
+body {
+    font-size: clamp(16px, 2vw, 24px);
+    @nest & p {
+        color: green;
+    }
+}
+
+:is(h1, p) a {
+    color: red;
+}
+
+@media (--narrow-window) {
+     :is(h1, p) a {
+        color: blue;
+    }
+}
